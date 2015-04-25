@@ -10,4 +10,18 @@ feature 'dishes' do
     end
   end
 
+  context "dishes have been added" do
+
+    before do
+      Dish.create(name: 'Shrimp Tempura', price:10)
+    end
+
+    scenario "should display all dishes" do
+      visit '/dishes'
+      expect(page).to have_content "Shrimp Tempura"
+      expect(page).to have_content 10
+      expect(page).not_to have_content "No dish added yet"
+    end
+  end
+
 end
