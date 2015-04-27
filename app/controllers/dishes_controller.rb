@@ -13,6 +13,10 @@ class DishesController < ApplicationController
     @dish = Dish.new
   end
 
+  def show
+    @dish = Dish.find(params[:id])
+  end
+
   def dish_params
     params.require(:dish).permit(:name, :price)
   end

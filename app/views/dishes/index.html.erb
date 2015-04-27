@@ -1,6 +1,6 @@
 <% if @dishes.any? %>
   <% @dishes.each do |dish| %>
-  <h2> <%= dish.name %> <%= dish.price %> </h2>
+  <h2> <%= dish.name %> <%= dish.price %> <%= link_to dish.name, dish_path(dish) %></h2>
   <% end %>
   <% else %>
   <h2> No dish added yet </h2>
