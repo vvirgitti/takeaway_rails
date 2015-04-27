@@ -1,11 +1,11 @@
 <% if @dishes.any? %>
   <% @dishes.each do |dish| %>
-  <h2> <%=dish.name %> <%=dish.price %> </h2>
+  <h2> <%= dish.name %> <%= dish.price %> </h2>
   <% end %>
   <% else %>
   <h2> No dish added yet </h2>
 <% end %>
 
-<form action="/dishes/new" method="post">
+<form action="/dishes/new" method="get">
   <input type="submit" value="Add a dish">
 </form>
