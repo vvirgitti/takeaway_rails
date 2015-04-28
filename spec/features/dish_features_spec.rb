@@ -37,24 +37,13 @@ feature 'dishes' do
     end
   end
 
-  context "viewing dishes" do
-    let!(:tempura){Dish.create(name:"tempura", price:10)}
-    scenario "lets user views a dish" do
-      visit '/dishes'
-      click_link 'tempura'
-      expect(page).to have_content('tempura 10')
-      expect(current_path).to eq "/dishes/#{tempura.id}"
-    end
-  end
-
   context "editing restaurants" do
     let!(:tempura){Dish.create(name:"tempura", price:10)}
     scenario "let a user edits a dish name" do
       visit '/dishes'
-      click_link 'tempura'
-      click_link 'Edit name'
+      click_link 'Edit tempura'
       fill_in 'Name', with: 'Shrimp Tempura'
-      click_button 'Update name'
+      click_button 'Update Dish'
       expect(page).to have_content("Shrimp Tempura")
       expect(current_path).to eq '/dishes'
     end

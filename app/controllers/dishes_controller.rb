@@ -17,6 +17,16 @@ class DishesController < ApplicationController
     @dish = Dish.find(params[:id])
   end
 
+  def edit
+    @dish = Dish.find(params[:id])
+  end
+
+  def update
+    @dish = Dish.find(params[:id])
+    @dish.update(dish_params)
+    redirect_to '/dishes'
+  end
+
   def dish_params
     params.require(:dish).permit(:name, :price)
   end
