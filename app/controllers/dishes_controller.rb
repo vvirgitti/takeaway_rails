@@ -27,6 +27,13 @@ class DishesController < ApplicationController
     redirect_to '/dishes'
   end
 
+  def destroy
+    @dish = Dish.find(params[:id])
+    @dish.destroy
+    flash[:notice] = "Dish successfully deleted"
+    redirect_to '/dishes'
+  end
+
   def dish_params
     params.require(:dish).permit(:name, :price)
   end

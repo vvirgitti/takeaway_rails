@@ -4,12 +4,14 @@
       <td>Name</td>
       <td>Price</td>
       <td>Edit</td>
+      <td>Delete</td>
     </tr>
     <% @dishes.each do |dish| %>
     <tr>
       <td><%= dish.name %></td>
       <td><%= dish.price %></td>
       <td><%= link_to "Edit #{dish.name}", edit_dish_path(dish) %></td>
+      <td><%= link_to "Delete #{dish.name}", dish_path(dish), method: :delete %></td>
     <% end %>
     </tr>
   </table>
