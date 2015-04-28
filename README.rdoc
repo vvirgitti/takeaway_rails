@@ -1,28 +1,27 @@
-== README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Takeaway restaurant
+Revisited version of Makers Academy's Takeaway challenge.
+Try it out here: [Takeaway Restaurant]()
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+#### Concept:
+Welcome to the Golden Dragon takeaway restaurant!
+As a client you can order from our menu, sign up and login. We will send you a text message when your order is confirmed with the delivery time.
+As the owner, you can add new dishes to the menu through a dedicated interface.
+
+
+#### Build with:
+- Ruby on Rails
+- Postgresql
+- Html
+- Css
+- Twilio API
+
+
+#### Features:
+- Website for clients to order their dishes
+- User can sign up and login
+- Interface for restaurant owners to add new dishes to the menu
+- Sends a text message when order is confirmed and with delivery time
+
+
+#### Future iterations:
