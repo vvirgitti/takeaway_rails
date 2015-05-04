@@ -1,15 +1,10 @@
 rvm: '2.2.1'
 
-before_install:
-  - sudo apt-get update -qq
-  - sudo apt-get install -qq postgresql-server-dev-9.3
-
-before_script:
-  - psql -c 'create database takeaway_rails_test;' -U postgres
-
 script:
-  - bundle exec rake auto_migrate RACK_ENV=test
-  - bundle exec rspec spec
+ - bundle exec bin/rake db:create
+ - bundle exec bin/rake db:migrate
+ - bundle exec rspec spec
 
 addons:
-  code_climate: 44e917754537d80f037a7294350d16858427de7f25d9e97530e14e60c1c6ed19
+  code_climate:
+    repo token: 44e917754537d80f037a7294350d16858427de7f25d9e97530e14e60c1c6ed19
