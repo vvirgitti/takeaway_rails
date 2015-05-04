@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/vvirgitti/takeaway_rails.svg?branch=test)](https://travis-ci.org/vvirgitti/takeaway_rails)
+![Travis Build](https://travis-ci.org/vvirgitti/takeaway_rails.svg?branch=test)
 
 ### Takeaway restaurant
 Revisited version of Makers Academy's Takeaway challenge.
