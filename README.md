@@ -14,17 +14,22 @@ As the owner, you can add new dishes to the menu through a dedicated interface.
 
 #### Build with:
 - Ruby on Rails
+- Active Records
 - Postgresql
-- Html
-- Css
+- Devise
+- HTML5
+- CSS
 - Twilio API
 
 
 #### Features:
-- Website for clients to order their dishes
-- User can sign up and login
-- Interface for restaurant owners to add new dishes to the menu
-- Sends a text message when order is confirmed and with delivery time
+- Customer can sign up, log in and log out
+- Customer can order food by adding dishes to their basket
+- Order's total is calculated automatically, based on price and quantities
+- Customer receives a text message when order is confirmed, with delivery time
+- Owner can add, delete or update a dish to the menu - the menu (and the dishes) is entirely saved in a database
 
 
 #### Future iterations:
+- Interface for the customer to keep track of past orders
+- Add payment functionality (Mastercard API)
