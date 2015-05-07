@@ -13,7 +13,7 @@ feature 'dishes' do
 
 
   context "creating a new dish" do
-    scenario "should display a promt to create a new dish, then display that dish" do
+    scenario "should display a prompt to create a new dish, then display that dish" do
       visit '/dishes'
       click_on 'Add a dish'
       fill_in 'Name', with: 'Shrimp Tempura'
